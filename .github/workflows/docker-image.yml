@@ -25,4 +25,4 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       
     - name: Docker Push
-      run: docker push docker push enginetix/sysml-docker-test:my-image-name:$(date +%s)
+      run: docker push enginetix/sysml-docker-test:my-image-name:$(date +%s)
