@@ -6,7 +6,10 @@ ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG PATH="/root/miniconda3/bin:${PATH}"
 RUN apt-get update
 
-RUN apt-get install -y git wget && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y default-jre git wget && rm -rf /var/lib/apt/lists/*
+
+# verify OpenJDK 11
+RUN java -version
 
 RUN wget \
     https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
@@ -14,10 +17,6 @@ RUN wget \
     && bash Miniconda3-latest-Linux-x86_64.sh -b \
     && rm -f Miniconda3-latest-Linux-x86_64.sh 
 RUN conda --version
-
-# install OpenJDK 11
-RUN install default-jre
-RUN java -version
 
 # install sysmlv2
 RUN git clone https://github.com/Systems-Modeling/SysML-v2-Release.git
