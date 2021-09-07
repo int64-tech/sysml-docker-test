@@ -23,4 +23,4 @@ jobs:
       run: docker build . --file Dockerfile --tag sysmlv2-docker-github-test
 
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/sysmlv2-docker-github-test
+      run: docker push enginetix/sysml-docker-test
