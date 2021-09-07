@@ -16,7 +16,7 @@ RUN wget \
 RUN conda --version
 
 # install OpenJDK 11
-RUN apt-get install openjdk-11-jdk-headless
+RUN install default-jre
 RUN java -version
 
 # install sysmlv2
