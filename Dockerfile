@@ -23,7 +23,7 @@ ENV PATH="${HOME}/conda/bin:${HOME}/conda/condabin:/usr/local/openjdk-17/bin:/us
 RUN git clone https://github.com/Systems-Modeling/SysML-v2-Release.git
 RUN cd /SysML-v2-Release/install/jupyter/
 RUN pwd
-RUN chmod +x install.sh
+RUN chmod 755 install.sh
 RUN ./install.sh
 RUN cd /home
 RUN mkdir lab
