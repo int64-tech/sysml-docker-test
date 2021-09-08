@@ -20,3 +20,10 @@ RUN conda --version
 
 # install sysmlv2
 RUN git clone https://github.com/Systems-Modeling/SysML-v2-Release.git
+RUN cd SysML*
+RUN chmod +x ./install.sh
+RUN ./install.sh
+RUN cd ./home
+RUN mkdir lab
+RUN cd lab
+RUN jupyter lab
