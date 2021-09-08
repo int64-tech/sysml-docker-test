@@ -81,3 +81,7 @@ RUN find . -maxdepth 1 -type f -exec mv \{\} doc \;
 
 ## Trust the notebooks so that the SVG images will be displayed.
 #RUN find . -name \*.ipynb -exec jupyter trust \{\} \;
+
+# Setup Jupyterlab
+EXPOSE 8888
+CMD ["jupyter", "lab", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root"]
