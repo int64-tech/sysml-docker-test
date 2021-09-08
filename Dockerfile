@@ -21,3 +21,4 @@ RUN conda --version
 # install sysmlv2
 #ENV PATH="${HOME}/conda/bin:${HOME}/conda/condabin:/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 RUN git clone https://github.com/Systems-Modeling/SysML-v2-Release.git
+RUN SysML-v2-Release/install/jupyter/.install.sh
